@@ -14,7 +14,7 @@ public class AdvancedTest {
 
     /**
      * Group the related dynamic tests.
-     * @return
+     * @return A collection whose type is stream, contains the dynamic test results.
      */
     @TestFactory
     Stream<DynamicNode> dynamicTestsWithContainers() {

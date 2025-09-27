@@ -15,6 +15,7 @@ public class DependencyInjectionTest {
     @BeforeEach
     void setUp(TestInfo testInfo) {
         // Setup logic with injected TestInfo
+        System.out.println("Test method: " + testInfo.getTestMethod() + " at setup.");
     }
 
     @Test

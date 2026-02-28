@@ -6,11 +6,11 @@ public class Calculator {
         return a + b;
     }
 
+    // help to refactor the below method
     public int substract(int a, int b) {
         if (a >= b) {
             return a - b;
         }
-
         return b - a;
     }
 

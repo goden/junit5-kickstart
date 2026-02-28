@@ -13,6 +13,7 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit5.current.version>5.13.4</junit5.current.version>
+        <jetty.version>12.1.1</jetty.version>
     </properties>
 
     <dependencies>
@@ -47,6 +48,21 @@
             <version>3.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!--
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>${jetty.version}</version>
+            <scope>test</scope>
+        </dependency>
+                -->
     </dependencies>
     <build>
         <plugins>
@@ -61,7 +77,6 @@
                     </configurationParameters>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>

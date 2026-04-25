@@ -4,10 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
-import java.util.concurrent.TimeUnit;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class EnumSourceTest {
 
@@ -32,8 +29,8 @@ public class EnumSourceTest {
         FAILURE(2, "失敗"),
         UNKNOWN(-1, "未知");
 
-        private int code;
-        private String desc;
+        private final int code;
+        private final String desc;
 
         UploadStatus(int code, String desc) {
             this.code = code;

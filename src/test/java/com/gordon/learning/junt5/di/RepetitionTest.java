@@ -15,18 +15,18 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 public class RepetitionTest {
 
-    private static Set<Integer> integerSet = new HashSet<>();
-    private static List<Integer> integerList = new ArrayList<>();
+    private static final Set<Integer> integerSet = new HashSet<>();
+    private static final List<Integer> integerList = new ArrayList<>();
 
     /**
      * basic usage
-     * @param repetitionInfo
+     * RepetitionInfo is an explicit injection.
      */
     @RepeatedTest(5)
-    void testRepetitions(RepetitionInfo repetitionInfo) {
+    void testRepetitions(RepetitionInfo info) {
 
-        int currentRepetition = repetitionInfo.getCurrentRepetition();
-        int totalRepetition = repetitionInfo.getTotalRepetitions();
+        int currentRepetition = info.getCurrentRepetition();
+        int totalRepetition = info.getTotalRepetitions();
 
         System.out.println("The current repetition is " + currentRepetition + " of the " + totalRepetition);
 

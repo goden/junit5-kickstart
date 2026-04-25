@@ -22,6 +22,10 @@ public class IndicatorDisplayNameTest {
         Assertions.assertEquals(11, actual);
     }
 
+    void tearDown() {
+        calculator = null;
+    }
+
     @Nested
     class MyNestedTest {
 
@@ -30,8 +34,6 @@ public class IndicatorDisplayNameTest {
             int actual = calculator.multiply(3, 5);
             Assertions.assertEquals(15, actual);
         }
-
-
     }
 
 }

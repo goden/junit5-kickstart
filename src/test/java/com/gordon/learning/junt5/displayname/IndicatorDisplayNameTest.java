@@ -22,6 +22,7 @@ public class IndicatorDisplayNameTest {
         Assertions.assertEquals(11, actual);
     }
 
+    @AfterEach
     void tearDown() {
         calculator = null;
     }

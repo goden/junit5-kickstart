@@ -1,9 +1,6 @@
 package com.gordon.learning.junt5.disabled;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 @Disabled("Each method in this class are disabled until the feature is complete.")
 public class DisabledEntireClassTest {
@@ -22,7 +19,12 @@ public class DisabledEntireClassTest {
 
     @BeforeEach
     void setUp() {
-        System.out.println("Setup won't run for disabled class");
+        System.out.println("Setup won't run for disabled class.");
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("TearDown won't run for disabled class.");
     }
 
 }

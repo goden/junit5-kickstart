@@ -8,9 +8,9 @@ import static org.hamcrest.Matchers.*;
 
 public class HamcrestMatcherTest {
 
-    private static String FIRST_NAME = "Gordan";
-    private static String LAST_NAME = "Cheng";
-    private Guest guest = new Guest(FIRST_NAME, LAST_NAME);
+    private static final String FIRST_NAME = "Gordan";
+    private static final String LAST_NAME = "Cheng";
+    private final Guest guest = new Guest(FIRST_NAME, LAST_NAME);
 
     @DisplayName("Hamcrest is, anyOf, allOf")
     @Test
@@ -45,7 +45,6 @@ public class HamcrestMatcherTest {
     public static class Guest {
         private String first;
         private String last;
-        public Guest() {}
         public Guest(String first, String last) {
             this.first = first;
             this.last = last;

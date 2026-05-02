@@ -11,7 +11,11 @@ public class User {
         this.lastName = lastName;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getName() {
-        return firstName + " " + lastName + "(" + id + ")";
+        return firstName + " " + lastName;
     }
 }

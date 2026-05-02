@@ -6,6 +6,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -42,11 +43,21 @@ public class UserServiceTest {
         // Stub : Suppose the user is not found in DB, return null else.
         when(mockRepository.findById(999L)).thenReturn(null);
 
+
         // Step 2: Action
         UserService service = new UserService(mockRepository);
         String name = service.getUserDisplayName(999L);
 
         // Step 3: Assert
         assertEquals("訪客", name);
+
+        // Another case, do step 1 for arrange and step 2 do action.
+        when(mockRepository.findById(anyLong())).thenReturn(new User(1L, "預設","用戶"));
+
+        // Stub: suppose user is the default user.
+        name = service.getUserDisplayName(1L);
+
+        // Do step 3 for assertion.
+        assertEquals("預設用戶", name);
     }
 }

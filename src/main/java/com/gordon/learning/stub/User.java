@@ -1,9 +1,9 @@
 package com.gordon.learning.stub;
 
 public class User {
-    private long id;
-    private String firstName;
-    private String lastName;
+    private final long id;
+    private final String firstName;
+    private final String lastName;
 
     public User(long id, String firstName, String lastName) {
         this.id = id;
@@ -12,6 +12,6 @@ public class User {
     }
 
     public String getName() {
-        return firstName + " " + lastName;
+        return firstName + " " + lastName + "(" + id + ")";
     }
 }

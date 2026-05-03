@@ -1,5 +1,7 @@
 package com.gordon.learning.mock;
 
+import com.gordon.learning.mock.case1.EmailService;
+import com.gordon.learning.mock.case1.RegistrationService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -17,7 +19,7 @@ public class RegistrationServiceTest {
 
     @Test
     void testRegister() {
-        RegistrationService  service = new RegistrationService(mockEmailService);
+        RegistrationService service = new RegistrationService(mockEmailService);
         String userEmail = "test@example.com";
 
         // Step 1: Act

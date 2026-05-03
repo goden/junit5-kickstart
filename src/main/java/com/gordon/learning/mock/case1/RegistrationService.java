@@ -1,4 +1,4 @@
-package com.gordon.learning.mock;
+package com.gordon.learning.mock.case1;
 
 public class RegistrationService {
 

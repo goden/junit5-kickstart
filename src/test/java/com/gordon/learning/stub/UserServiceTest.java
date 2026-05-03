@@ -1,5 +1,8 @@
 package com.gordon.learning.stub;
 
+import com.gordon.learning.stub.case2.User;
+import com.gordon.learning.stub.case2.UserRepository;
+import com.gordon.learning.stub.case2.UserService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;

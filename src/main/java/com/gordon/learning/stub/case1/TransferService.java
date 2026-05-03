@@ -1,4 +1,4 @@
-package com.gordon.learning.stub;
+package com.gordon.learning.stub.case1;
 
 /**
  * <h3>轉帳服務</h3>

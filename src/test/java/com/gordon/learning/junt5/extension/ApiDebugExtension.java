@@ -16,7 +16,7 @@ public class ApiDebugExtension implements BeforeEachCallback, TestWatcher {
     private static final ExtensionContext.Namespace NAMESPACE = ExtensionContext.Namespace.create(ApiDebugExtension.class);
 
     @Override
-    public void beforeEach(ExtensionContext context) throws Exception {
+    public void beforeEach(ExtensionContext context) {
         // 在每個測試開始前，於 Store 中開闢一個空間存放該測試專用的 Debug 物件
         context.getStore(NAMESPACE).put(STORE_KEY, new ApiDebugInfo());
     }
@@ -52,8 +52,6 @@ public class ApiDebugExtension implements BeforeEachCallback, TestWatcher {
 
     /**
      *
-     * @param context
-     * @return
      */
     public static ApiDebugInfo getInfo(ExtensionContext context) {
         return context.getStore(NAMESPACE).get(STORE_KEY, ApiDebugInfo.class);

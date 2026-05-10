@@ -1,10 +1,11 @@
 package com.gordon.learning.junt5.extension;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.extension.ExtensionContext;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith({ApiDebugExtension.class, ExtensionContextResolver.class})
 public class ProductApiTest {
@@ -21,6 +22,6 @@ public class ProductApiTest {
         debugInfo.responseBody = "{ \"error\": \"Permission Denied\", \"trace_id\": \"req-999\" }";
 
         // 2. 進行斷言 (這裡會失敗)
-        Assertions.assertEquals(200, debugInfo.statusCode, "更新價格應該要成功");
+        assertEquals(200, debugInfo.statusCode, "更新價格應該要成功");
     }
 }
